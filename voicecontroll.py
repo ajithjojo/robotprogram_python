@@ -1,6 +1,7 @@
 import pyttsx3 as tts
 import sys
 from neuralintents import GenericAssistant
+from datetime import datetime
 speaker = tts.init()
 speaker.setProperty('rate',150)
 
@@ -41,15 +42,27 @@ def createnote():
             speaker.say("Please try again")
             speaker.runAndWait()
 
-   
+def time():
+        now = datetime.now()
+        current_time = now.strftime("%h:%m")
+        finaltime = "the time is ", current_time
+        speaker.say(finaltime) 
+        speaker.runAndWait()      
+
+def weather():
+      
+        speaker.say("I am having truble connecting to my weather module. please do a diagnosis") 
+        speaker.runAndWait()   
 
 def quit():
-        speaker.say("Bye") 
+        speaker.say("Turning Off") 
         speaker.runAndWait()
         sys.exit(0)
 
 
 mappings = {        
        "createnote": createnote,
+       "time": time,
+       "weather": weather,
        "exit": quit
 }

@@ -16,17 +16,20 @@ assistant.load_model()
 while True:
     try:
         with speech_recognition.Microphone() as mic:
-            recognizer.adjust_for_ambient_noise(mic, duration=0.1)
+            print("start listening")
+            recognizer.adjust_for_ambient_noise(mic, duration=0.2)
             audio = recognizer.listen(mic)
-            print("listning")
+            print("stop listening")
             message =  recognizer.recognize_google(audio)
             message = message.lower()
             print(message)
 
         responseaudio = assistant.request(message)
-        if responseaudio != 'none':
+        if responseaudio != 'none':           
+            print(responseaudio)
             speaker.say(responseaudio) 
             speaker.runAndWait()
+                
 
     except speech_recognition.UnknownValueError:
         recognizer = speech_recognition.Recognizer()    

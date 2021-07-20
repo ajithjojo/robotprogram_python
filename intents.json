@@ -6,11 +6,19 @@
         },
         {"tag": "createnote",
             "patterns": ["create a note","note this"],  
-            "responses": [""]  
+            "responses": [" "]  
+        },
+        {"tag": "time",
+            "patterns": ["whats the time","what time","may i know the time","check clock","time please"],  
+            "responses": [" "]  
+        },
+        {"tag": "weather",
+            "patterns": ["whats the weather","how is the weather","may i know the weather updates","check weather","weather updates"],  
+            "responses": [" "]  
         },
         {"tag": "exit",
             "patterns": ["stop"],  
-            "responses": [""]  
+            "responses": [" "]  
         }
         
     ]
