@@ -1,0 +1,18 @@
+{ "intents":
+    [
+        {"tag": "greeting",
+          "patterns": ["hey","hello","how are you","whats up"],  
+          "responses": ["hey sir","hello sir","how can i help you sir","how is your day sir"]  
+        },
+        {"tag": "createnote",
+            "patterns": ["create a note","note this"],  
+            "responses": [""]  
+        },
+        {"tag": "exit",
+            "patterns": ["stop"],  
+            "responses": [""]  
+        }
+        
+    ]
+
+}
